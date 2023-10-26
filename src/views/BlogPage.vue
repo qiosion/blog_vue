@@ -1,7 +1,7 @@
 <script setup>
     import { ref } from 'vue'
     import axios from 'axios'
-    import BlogCard from './BlogCard.vue'
+    import BlogCard from '../components/BlogCard.vue'
 
     const cards = ref([{}])
 
