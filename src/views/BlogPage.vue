@@ -1,6 +1,7 @@
 <script setup>
     import { ref } from 'vue'
     import axios from 'axios'
+    import BlogCard from './BlogCard.vue'
 
     const cards = ref([{}])
 
@@ -66,54 +67,20 @@
 
         <v-row justify-start class="mt-7">
             <v-col>
-                <v-card v-for="item in cards"
-                    :key="item.id"
-                    elevation="12"
-                    class="ma-4">
-                        <div class="d-flex">
-                            <div class="flex-0-0">
-                                <v-avatar
-                                    class="ma-3"
-                                    size="140"
-                                    rounded="0">
-                                    <v-img src = "http://34.22.80.242:9991/static/foster.jpg"></v-img>
-                                </v-avatar>
-                            </div>
-                        
-                            <div class="flex-1-1">
-                                <v-card-title>
-                                    {{ item.title }}
-                                </v-card-title>
+                <BlogCard v-for="item in cards" :key="item.id">
+                                
+                    <template #title>
+                        {{ item.title }}
+                    </template>
 
-                                <v-card-subtitle>
-                                    written by {{ item.author }}
-                                </v-card-subtitle>
+                    <template #author>
+                        {{ item.author }}
+                    </template>
 
-                                <v-card-text>
-                                    {{ item.content }}
-                                </v-card-text>
-
-                                <v-card-actions>
-                                    <v-btn
-                                        color="blue-darken-4 ma-1"
-                                        variant="flat"
-                                        prepend-icon="mdi-book-open-page-variant">
-                                    더보기</v-btn>
-
-                                    <v-spacer></v-spacer>
-                                    <v-btn size="small" color="surface-variant"
-                                        variant="text"
-                                        icon="mdi-heart"></v-btn>
-                                    <v-btn size="small" color="surface-variant"
-                                        variant="text"
-                                        icon="mdi-bookmark"></v-btn>
-                                    <v-btn size="small" color="surface-variant"
-                                        variant="text"
-                                        icon="mdi-share-variant"></v-btn>
-                                </v-card-actions>
-                            </div>
-                        </div>
-                </v-card>
+                    <template #content>
+                        {{ item.content }}
+                    </template>
+                </BlogCard>
             </v-col>
         </v-row>
     </v-container>
