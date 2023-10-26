@@ -21,7 +21,7 @@
               variant="flat"
             >
               <v-icon
-                icon="mdi-speedometer"
+                icon="mdi-account-group"
                 size="large"
                 start
               />
