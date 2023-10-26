@@ -69,48 +69,54 @@
                 <v-card v-for="item in cards"
                     :key="item.id"
                     elevation="12"
-                    width="468"
                     class="ma-4">
-                    <div class="d-flex flex-no-wrap justify-space-between">
-                        <v-avatar
-                            class="ma-3"
-                            size="140"
-                            rounded="0">
-                            <v-img src = "http://34.22.80.242:9991/static/foster.jpg"></v-img>
-                        </v-avatar>
-                        <div>
-                            <v-card-title>
-                                {{ item.title }}
-                            </v-card-title>
+                    <!-- <v-row> -->
+                        <div class="d-flex">
+                            <div class="flex-0-0">
+                                <v-avatar
+                                    class="ma-3"
+                                    size="140"
+                                    rounded="0">
+                                    <v-img src = "http://34.22.80.242:9991/static/foster.jpg"></v-img>
+                                </v-avatar>
+                            </div>
+                        
+                            <!-- <v-col cols="auto"> -->
+                            <div class="flex-1-1">
+                                <v-card-title>
+                                    {{ item.title }}
+                                </v-card-title>
 
-                            <v-card-subtitle>
-                                written by {{ item.author }}
-                            </v-card-subtitle>
+                                <v-card-subtitle>
+                                    written by {{ item.author }}
+                                </v-card-subtitle>
 
-                            <v-card-text>
-                                {{ item.content }}
-                            </v-card-text>
+                                <v-card-text>
+                                    {{ item.content }}
+                                </v-card-text>
 
-                            <v-card-actions>
-                                <v-btn
-                                    color="blue-darken-4 ma-1"
-                                    variant="flat"
-                                    prepend-icon="mdi-book-open-page-variant">
-                                더보기</v-btn>
+                                <v-card-actions>
+                                    <v-btn
+                                        color="blue-darken-4 ma-1"
+                                        variant="flat"
+                                        prepend-icon="mdi-book-open-page-variant">
+                                    더보기</v-btn>
 
-                                <v-spacer></v-spacer>
-                                <v-btn size="small" color="surface-variant"
-                                    variant="text"
-                                    icon="mdi-heart"></v-btn>
-                                <v-btn size="small" color="surface-variant"
-                                    variant="text"
-                                    icon="mdi-bookmark"></v-btn>
-                                <v-btn size="small" color="surface-variant"
-                                    variant="text"
-                                    icon="mdi-share-variant"></v-btn>
-                            </v-card-actions>
+                                    <v-spacer></v-spacer>
+                                    <v-btn size="small" color="surface-variant"
+                                        variant="text"
+                                        icon="mdi-heart"></v-btn>
+                                    <v-btn size="small" color="surface-variant"
+                                        variant="text"
+                                        icon="mdi-bookmark"></v-btn>
+                                    <v-btn size="small" color="surface-variant"
+                                        variant="text"
+                                        icon="mdi-share-variant"></v-btn>
+                                </v-card-actions>
+                            </div>
+                            <!-- </v-col> -->
                         </div>
-                    </div>
+                    <!-- </v-row> -->
                 </v-card>
             </v-col>
         </v-row>
