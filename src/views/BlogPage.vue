@@ -37,7 +37,7 @@
     <v-container class="pa-10">
         <v-row>
             <v-col>
-                <div class="text-h5 font-weight-bold">강은선's POSTS</div>
+                <div class="text-h5 font-weight-bold">SUN's POSTS</div>
             </v-col>
             <v-spacer></v-spacer>
             <v-col class="text-right">
@@ -58,11 +58,11 @@
             </v-col>
         </v-row>
 
-        <v-row>
+        <!-- <v-row>
             <v-col>
  
             </v-col>
-        </v-row>
+        </v-row> -->
 
         <v-row justify-start class="mt-7">
             <v-col>
