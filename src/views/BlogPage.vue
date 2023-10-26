@@ -70,7 +70,6 @@
                     :key="item.id"
                     elevation="12"
                     class="ma-4">
-                    <!-- <v-row> -->
                         <div class="d-flex">
                             <div class="flex-0-0">
                                 <v-avatar
@@ -81,7 +80,6 @@
                                 </v-avatar>
                             </div>
                         
-                            <!-- <v-col cols="auto"> -->
                             <div class="flex-1-1">
                                 <v-card-title>
                                     {{ item.title }}
@@ -114,9 +112,7 @@
                                         icon="mdi-share-variant"></v-btn>
                                 </v-card-actions>
                             </div>
-                            <!-- </v-col> -->
                         </div>
-                    <!-- </v-row> -->
                 </v-card>
             </v-col>
         </v-row>
